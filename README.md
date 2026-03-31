@@ -1,4 +1,4 @@
-# SheHealth - AI-Powered Women's Health Companion
+# SheHealth AI Powered Womens Health Companion
 
 > A full-stack serverless health application **built entirely using [Kiro](https://kiro.dev)** — Amazon's AI-powered IDE. Powered by AWS services and Groq AI (Llama 3 models), SheHealth helps women track symptoms, chat with an AI health assistant, and generate structured medical reports — all in a secure, scalable, cloud-native architecture.
 
@@ -39,6 +39,9 @@ Click **Reports** in the nav. Set a from-date and to-date range, then click **Ge
 
 **Step 7 — Re-download Past Reports**
 All previously generated reports appear below the generator card with their date, symptom count, and a preview of the AI summary. Each **Download PDF** button generates a fresh pre-signed S3 URL valid for 1 hour.
+
+**Step 8 — Find Nearby Hospitals**
+On the Dashboard, click **Book Now** inside the "Schedule an Appointment" card. A modal pops up with two options: click **Use My Current Location** to let the browser detect your GPS coordinates, or type a city name and hit **Search**. Either way, Google Maps opens in a new tab pre-filtered to show hospitals and clinics near that location.
 
 ---
 
@@ -310,6 +313,7 @@ Setting up all of this infrastructure manually through the AWS Console would tak
 - **Symptom History** — View the last 30 days of logged symptoms with timestamps and severity.
 - **Medical Report Generation** — One-click report generation that collects all logged symptoms, sends them to Groq AI with a medical prompt, and produces a structured health report downloadable via a secure pre-signed URL.
 - **Report History** — View and re-download all previously generated reports.
+- **Find Nearby Hospitals** — The "Book Now" button on the Dashboard opens a modal to find hospitals and clinics nearby. Uses the browser's Geolocation API to detect your current location or lets you search by city name — then opens Google Maps pre-loaded with hospital results in that area.
 - **Fully Serverless** — No servers to manage. Auto-scales to any traffic level. Near-zero idle cost.
 - **Multi-model Fallback** — If the primary AI model is unavailable, requests automatically fall through to backup models with no visible disruption.
 
@@ -532,7 +536,14 @@ The downloaded report is formatted with clearly defined sections: **Patient Heal
 
 ---
 
-## API Reference
+### 7. Find Nearby Hospitals
+
+![Find Nearby Hospitals Modal](screenshots/14-find-hospitals-modal.png)
+![Google Maps Hospital Results](screenshots/15-hospitals-google-maps.png)
+
+Clicking **Book Now** on the Dashboard triggers a modal with two options — use the browser's Geolocation API to detect the user's current position, or manually enter a city name. Either path opens Google Maps in a new tab pre-queried for hospitals and clinics in that area. The second screenshot shows a real result: hospitals near Coimbatore, Tamil Nadu, with ratings, directions, and contact numbers.
+
+---
 
 All endpoints require an `Authorization: <Cognito ID Token>` header. The Cognito JWT authorizer on API Gateway validates the token before any Lambda is invoked.
 
