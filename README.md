@@ -1,4 +1,4 @@
-# SheHealth — AI-Powered Women's Health Companion
+# SheHealth - AI-Powered Women's Health Companion
 
 > A full-stack serverless health application **built entirely using [Kiro](https://kiro.dev)** — Amazon's AI-powered IDE. Powered by AWS services and Groq AI (Llama 3 models), SheHealth helps women track symptoms, chat with an AI health assistant, and generate structured medical reports — all in a secure, scalable, cloud-native architecture.
 
