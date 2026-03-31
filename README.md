@@ -10,8 +10,8 @@
 
 > > **Deployed URL:** [https://d3dczdioqgaqqt.cloudfront.net](https://d3dczdioqgaqqt.cloudfront.net)
 
-![SheHealth Landing Page](screenshots/01-landing-hero.png)
-![SheHealth Features Section](screenshots/02-landing-features.png)
+![SheHealth Landing Page](https://github.com/Naveen15github/SheHealth-AI-Powered-Womens-Health-Companion/blob/cef781c043266d1e8a68c2ade654296044cc9d0d/frontend/Screenshot%20(539).png)
+![SheHealth Features Section](https://github.com/Naveen15github/SheHealth-AI-Powered-Womens-Health-Companion/blob/cef781c043266d1e8a68c2ade654296044cc9d0d/frontend/Screenshot%20(540).png)
 
 ---
 
@@ -99,6 +99,8 @@ The entire backend is serverless. There are no servers to manage, no databases t
 ---
 
 ## Architecture Overview
+![Architecture Diagram](https://github.com/Naveen15github/SheHealth-AI-Powered-Womens-Health-Companion/blob/cef781c043266d1e8a68c2ade654296044cc9d0d/frontend/Gemini_Generated_Image_xmmqv4xmmqv4xmmq.png)
+
 
 <!-- ============================================================ -->
 <!-- 🖼️  DIAGRAM: Insert your AWS architecture diagram here.      -->
@@ -482,7 +484,7 @@ https://<CloudFrontDomain>.cloudfront.net
 
 ### 1. Registration & Email Verification
 
-![Login Page](screenshots/03-login.png)
+![Login Page](https://github.com/Naveen15github/SheHealth-AI-Powered-Womens-Health-Companion/blob/cef781c043266d1e8a68c2ade654296044cc9d0d/frontend/Screenshot%20(541).png)
 
 User enters their email and password. Cognito sends a 6-digit OTP to the email address. After verification, the account is activated and the user is redirected to the Dashboard.
 
@@ -490,8 +492,8 @@ User enters their email and password. Cognito sends a 6-digit OTP to the email a
 
 ### 2. Dashboard
 
-![Dashboard — Welcome & Quick Actions](screenshots/04-dashboard-top.png)
-![Dashboard — Health Topics](screenshots/05-dashboard-topics.png)
+![Dashboard — Welcome & Quick Actions](https://github.com/Naveen15github/SheHealth-AI-Powered-Womens-Health-Companion/blob/cef781c043266d1e8a68c2ade654296044cc9d0d/frontend/Screenshot%20(542).png)
+![Dashboard — Health Topics](https://github.com/Naveen15github/SheHealth-AI-Powered-Womens-Health-Companion/blob/cef781c043266d1e8a68c2ade654296044cc9d0d/frontend/Screenshot%20(543).png)
 
 On login, users land on the Dashboard. A daily health tip, a multilingual AI banner, and quick-action cards for AI Assistant, Log Symptoms, and View Reports are all immediately accessible. Scrolling down reveals health topic categories and a "Schedule an Appointment" CTA.
 
@@ -500,13 +502,13 @@ On login, users land on the Dashboard. A daily health tip, a multilingual AI ban
 ### 3. AI Chat Assistant
 
 **English:**
-![AI Chat — English](screenshots/11-chat-english.png)
+![AI Chat — English](https://github.com/Naveen15github/SheHealth-AI-Powered-Womens-Health-Companion/blob/cef781c043266d1e8a68c2ade654296044cc9d0d/frontend/Screenshot%20(549).png)
 
 **Tanglish (Tamil-English mix):**
-![AI Chat — Tanglish](screenshots/12-chat-tanglish.png)
+![AI Chat — Tanglish](https://github.com/Naveen15github/SheHealth-AI-Powered-Womens-Health-Companion/blob/cef781c043266d1e8a68c2ade654296044cc9d0d/frontend/Screenshot%20(550).png)
 
 **Pure Tamil:**
-![AI Chat — Tamil](screenshots/13-chat-tamil.png)
+![AI Chat — Tamil](https://github.com/Naveen15github/SheHealth-AI-Powered-Womens-Health-Companion/blob/cef781c043266d1e8a68c2ade654296044cc9d0d/frontend/Screenshot%20(551).png)
 
 The chat interface sends messages to `POST /chat`. Lambda passes the full conversation history, the user's health profile, and the current message to the Groq API. Responses from Llama 3.3 70B typically arrive within 1–2 seconds. The left sidebar stores all past conversations — users can switch between them or start a fresh one with **+ New Chat**. The AI seamlessly handles English, Tanglish, and Tamil in the same session.
 
@@ -514,8 +516,8 @@ The chat interface sends messages to `POST /chat`. Lambda passes the full conver
 
 ### 4. Symptom Logging
 
-![Symptom Logger Form](screenshots/06-symptom-logger.png)
-![Symptom History](screenshots/07-symptom-history.png)
+![Symptom Logger Form](https://github.com/Naveen15github/SheHealth-AI-Powered-Womens-Health-Companion/blob/cef781c043266d1e8a68c2ade654296044cc9d0d/frontend/Screenshot%20(544).png)
+![Symptom History](https://github.com/Naveen15github/SheHealth-AI-Powered-Womens-Health-Companion/blob/cef781c043266d1e8a68c2ade654296044cc9d0d/frontend/Screenshot%20(545).png)
 
 Users log symptoms with a type (Cramps, Fatigue, Mood Swings, Fever, etc.), date, severity rating (1–10 slider), and optional notes. `POST /symptoms` validates and stores the entry in DynamoDB. `GET /symptoms` retrieves the last 30 days of entries sorted by timestamp, displayed as a card list below the form. Each entry shows the symptom name, date, severity, and any notes added.
 
@@ -523,14 +525,14 @@ Users log symptoms with a type (Cramps, Fatigue, Mood Swings, Fever, etc.), date
 
 ### 5. Report Generation
 
-![Health Reports Page](screenshots/08-reports-page.png)
+![Health Reports Page](https://github.com/Naveen15github/SheHealth-AI-Powered-Womens-Health-Companion/blob/cef781c043266d1e8a68c2ade654296044cc9d0d/frontend/Screenshot%20(546).png)
 
 Clicking **Generate Report** calls `POST /reports/generate`. Lambda fetches all symptom data for the selected date range from DynamoDB, constructs a structured medical prompt, and sends it to Groq AI. The output is saved to a private S3 bucket and a pre-signed URL valid for 1 hour is returned. Previously generated reports show a summary preview inline with a **Download PDF** button.
 
 ### 6. Generated Report — Doctor-Ready PDF
 
-![Generated Report — Page 1](screenshots/09-report-pdf-page1.png)
-![Generated Report — Page 2](screenshots/10-report-pdf-page2.png)
+![Generated Report — Page 1](https://github.com/Naveen15github/SheHealth-AI-Powered-Womens-Health-Companion/blob/cef781c043266d1e8a68c2ade654296044cc9d0d/frontend/Screenshot%20(547).png)
+![Generated Report — Page 2](https://github.com/Naveen15github/SheHealth-AI-Powered-Womens-Health-Companion/blob/cef781c043266d1e8a68c2ade654296044cc9d0d/frontend/Screenshot%20(548).png)
 
 The downloaded report is formatted with clearly defined sections: **Patient Health Summary**, **Symptom Analysis**, **Clinical Observations**, and **Recommendations** — structured specifically to be useful in a clinical setting. A disclaimer footer clarifies it is AI-generated and intended to assist, not replace, a doctor's diagnosis.
 
@@ -538,8 +540,8 @@ The downloaded report is formatted with clearly defined sections: **Patient Heal
 
 ### 7. Find Nearby Hospitals
 
-![Find Nearby Hospitals Modal](screenshots/14-find-hospitals-modal.png)
-![Google Maps Hospital Results](screenshots/15-hospitals-google-maps.png)
+![Find Nearby Hospitals Modal](https://github.com/Naveen15github/SheHealth-AI-Powered-Womens-Health-Companion/blob/cef781c043266d1e8a68c2ade654296044cc9d0d/frontend/Screenshot%20(552).png)
+![Google Maps Hospital Results](https://github.com/Naveen15github/SheHealth-AI-Powered-Womens-Health-Companion/blob/cef781c043266d1e8a68c2ade654296044cc9d0d/frontend/Screenshot%20(553).png)
 
 Clicking **Book Now** on the Dashboard triggers a modal with two options — use the browser's Geolocation API to detect the user's current position, or manually enter a city name. Either path opens Google Maps in a new tab pre-queried for hospitals and clinics in that area. The second screenshot shows a real result: hospitals near Coimbatore, Tamil Nadu, with ratings, directions, and contact numbers.
 
