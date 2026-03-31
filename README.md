@@ -8,7 +8,7 @@
 
 ## 📸 Live Demo
 
-> **Deployed URL:** `https://d3dczdioqgaqqt.cloudfront.net`
+> > **Deployed URL:** [https://d3dczdioqgaqqt.cloudfront.net](https://d3dczdioqgaqqt.cloudfront.net)
 
 ![SheHealth Landing Page](screenshots/01-landing-hero.png)
 ![SheHealth Features Section](screenshots/02-landing-features.png)
