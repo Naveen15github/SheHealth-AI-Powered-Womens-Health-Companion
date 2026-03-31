@@ -1,0 +1,49 @@
+:root {
+  /* Colors - Baby Pink + Tech Glass palette */
+  --color-primary: #E8526A;
+  --color-primary-light: #FFE8EE;
+  --color-teal: #1B4B5A;
+  --color-teal-light: #E8F4F7;
+  --color-mint: #4CAF8A;
+  --color-mint-light: #E8F8F2;
+  --color-peach: #FFB347;
+  --color-purple-light: #F5E8FF;
+  --color-text-primary: #2D1B2E;
+  --color-text-secondary: #6B4C5E;
+  --color-text-muted: #B08090;
+  --color-border: rgba(232, 82, 106, 0.15);
+  --color-surface: rgba(255, 255, 255, 0.75);
+  --color-background: #FFF0F5;
+  --color-glass: rgba(255, 255, 255, 0.6);
+  --color-glass-border: rgba(255, 255, 255, 0.8);
+
+  /* Typography */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 22px;
+  --font-size-2xl: 28px;
+  --font-size-3xl: 36px;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 50px;
+
+  /* Shadows */
+  --shadow-card: 0 4px 24px rgba(232, 82, 106, 0.08), 0 1px 4px rgba(232, 82, 106, 0.04);
+  --shadow-glass: 0 8px 32px rgba(232, 82, 106, 0.12), inset 0 1px 0 rgba(255,255,255,0.8);
+
+  /* Font Family */
+  --font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+}

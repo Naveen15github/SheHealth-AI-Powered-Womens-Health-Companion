@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <defs>
+    <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F48FB1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C2185B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="faceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FCE4EC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F48FB1;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer circle arc -->
+  <path d="M120 20 A100 100 0 1 1 119.9 20" stroke="url(#pinkGrad)" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Face fill (light pink) -->
+  <path d="M105 72 C92 76 82 88 80 102 C78 116 83 128 92 135 C95 138 97 143 97 150 L97 158 L128 158 L128 150 C128 143 130 138 134 134 C142 126 147 114 144 100 C140 82 124 66 105 72Z" fill="url(#faceGrad)"/>
+
+  <!-- Face outline -->
+  <path d="M105 72 C92 76 82 88 80 102 C78 116 83 128 92 135 C95 138 97 143 97 150 L97 158 L128 158 L128 150 C128 143 130 138 134 134 C142 126 147 114 144 100 C140 82 124 66 105 72Z" stroke="url(#pinkGrad)" stroke-width="2.5" fill="none"/>
+
+  <!-- Hair - main sweep -->
+  <path d="M105 72 C115 62 132 58 146 65 C160 72 166 88 162 104" stroke="url(#pinkGrad)" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Hair - second layer -->
+  <path d="M110 68 C122 57 140 54 154 62 C168 70 172 88 166 106" stroke="#E91E8C" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- Hair - third layer -->
+  <path d="M115 65 C128 53 148 51 162 60 C175 68 178 88 170 108" stroke="#F06292" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Hair - fourth layer (lighter) -->
+  <path d="M120 63 C134 50 156 49 168 59 C180 68 182 90 172 112" stroke="#F48FB1" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Neural network dots -->
+  <circle cx="162" cy="65" r="5" fill="#E91E8C"/>
+  <circle cx="178" cy="82" r="4" fill="#F48FB1" opacity="0.9"/>
+  <circle cx="172" cy="100" r="4.5" fill="#C2185B" opacity="0.85"/>
+  <circle cx="188" cy="72" r="3" fill="#F48FB1" opacity="0.7"/>
+  <circle cx="182" cy="58" r="3.5" fill="#E91E8C" opacity="0.6"/>
+
+  <!-- Neural network connecting lines -->
+  <line x1="162" y1="65" x2="178" y2="82" stroke="#E91E8C" stroke-width="1.5" opacity="0.5"/>
+  <line x1="178" y1="82" x2="172" y2="100" stroke="#F48FB1" stroke-width="1.5" opacity="0.5"/>
+  <line x1="162" y1="65" x2="182" y2="58" stroke="#E91E8C" stroke-width="1" opacity="0.4"/>
+  <line x1="182" y1="58" x2="188" y2="72" stroke="#F48FB1" stroke-width="1" opacity="0.4"/>
+  <line x1="188" y1="72" x2="178" y2="82" stroke="#E91E8C" stroke-width="1" opacity="0.4"/>
+
+  <!-- Sparkle star (top left of face) -->
+  <path d="M82 80 L84.5 73 L87 80 L94 82.5 L87 85 L84.5 92 L82 85 L75 82.5 Z" fill="#E91E8C" opacity="0.9"/>
+
+  <!-- Small glow dots near sparkle -->
+  <circle cx="76" cy="96" r="2.5" fill="#F48FB1" opacity="0.6"/>
+  <circle cx="74" cy="108" r="2" fill="#E91E8C" opacity="0.4"/>
+  <circle cx="78" cy="72" r="1.5" fill="#F48FB1" opacity="0.5"/>
+
+  <!-- Glowing dots on hair -->
+  <circle cx="138" cy="70" r="2.5" fill="white" opacity="0.8"/>
+  <circle cx="152" cy="76" r="2" fill="white" opacity="0.6"/>
+  <circle cx="158" cy="90" r="2" fill="white" opacity="0.5"/>
+</svg>

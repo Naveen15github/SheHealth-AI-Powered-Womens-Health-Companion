@@ -1,0 +1,21 @@
+{
+  "name": "shehealth-chat-handler",
+  "version": "1.0.0",
+  "description": "SheHealth chatHandler Lambda — handles profile and AI chat routes",
+  "main": "index.js",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.540.0",
+    "@aws-sdk/lib-dynamodb": "^3.540.0",
+    "@aws-sdk/client-bedrock-runtime": "^3.750.0",
+    "@aws-sdk/client-s3": "^3.540.0",
+    "@aws-sdk/s3-request-presigner": "^3.540.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "fast-check": "^3.15.0",
+    "jest": "^29.7.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}

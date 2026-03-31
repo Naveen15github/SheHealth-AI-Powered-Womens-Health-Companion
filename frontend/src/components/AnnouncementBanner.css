@@ -1,0 +1,32 @@
+.announcement-banner {
+  background: var(--color-teal);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--font-size-sm);
+  position: relative;
+}
+
+.announcement-banner__text {
+  flex: 1;
+  text-align: center;
+}
+
+.announcement-banner__dismiss {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  position: absolute;
+  right: var(--space-md);
+  top: 50%;
+  transform: translateY(-50%);
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
